@@ -1,0 +1,21 @@
+.table{
+    display: flex;
+    height:30vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableHeading{
+    margin: 10px;
+}
+
+td {
+    text-align: center;
+}
+th {
+    text-align: left;
+}
+th, td {
+    padding: 0.8rem;
+}

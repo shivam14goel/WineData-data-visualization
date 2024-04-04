@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './Components/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Flavanoids from './Components/Flavanoids';
+import Gamma from './Components/Gamma';
+
 
 function App() {
+  // const [action, setAction] = useState('Flavanoid');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className='HomePage'>
+      <nav className='Navbar'>
+        Wine Data Set
+      </nav>
+
+      <Header /> {/* displayComponent={setAction} */}
+      <Routes>
+        <Route exact path='/Flavanoids' Component={Flavanoids}></Route>
+        <Route exact path='/Gamma' Component={Gamma}></Route>
+      </Routes>
+
     </div>
-  );
+    </BrowserRouter>
+  )
 }
 
 export default App;
